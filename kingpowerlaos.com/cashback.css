@@ -1,0 +1,196 @@
+/* Cashback Page Styles */
+
+.cashback-container {
+    margin-top: 0.5rem;
+}
+
+.cashback-header {
+    background: var(--bg-home, #f8f9fa);
+    border-radius: 1rem;
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+.cashback-header .card-header {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.cashback-main-card {
+    background: var(--bg-home, #f8f9fa);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.cashback-title {
+    margin-bottom: 1rem;
+}
+
+.cashback-title img {
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+.cashback-amount-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cashback-amount-value {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.cashback-withdraw-btn {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.cashback-history-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cashback-period-selector {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cashback-period-selector fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cashback-period-selector legend {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.cashback-period-option {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.cashback-period-option:last-child {
+    margin-right: 0;
+}
+
+.cashback-table-container {
+    margin-top: 1rem;
+}
+
+.cashback-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cashback-table thead th {
+    background-color: #abf7f7;
+    text-align: center;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.cashback-table tbody td {
+    text-align: center;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+.cashback-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.cashback-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Loading and error states */
+.cashback-loading {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.cashback-error {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.cashback-warning {
+    color: #ffc107;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cashback-container {
+        margin-top: 0.25rem;
+    }
+    
+    .cashback-main-card {
+        padding: 0.75rem;
+    }
+    
+    .cashback-title img {
+        height: 40px;
+    }
+    
+    .cashback-amount-value {
+        font-size: 1.5rem;
+    }
+    
+    .cashback-period-option {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cashback-table-container {
+        overflow-x: auto;
+    }
+}
+
+/* Accessibility improvements */
+.cashback-table th[scope="col"] {
+    position: relative;
+}
+
+.cashback-table th[scope="col"]:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.cashback-withdraw-btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.cashback-period-option input[type="radio"]:focus + label {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Animation for smooth transitions */
+.cashback-amount-value {
+    transition: color 0.3s ease;
+}
+
+.cashback-withdraw-btn {
+    transition: all 0.3s ease;
+}
+
+.cashback-withdraw-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cashback-withdraw-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
